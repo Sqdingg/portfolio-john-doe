@@ -6,7 +6,7 @@ function Home() {
   const [showModal, setShowModal] = useState(false)
   const [githubProfile, setGithubProfile] = useState(null)
 
-  // Appel API GitHub une seule fois au chargement de la page
+  // Appel API GitHub
   useEffect(() => {
     fetch('https://api.github.com/users/github-johndoe')
       .then(res => res.json())
@@ -15,7 +15,7 @@ function Home() {
 
   return (
     <>
-      {/* ── HERO ── */}
+      {/* HERO */}
       <section className="hero-section">
         <div className="hero-content">
           <h1 className="display-4 fw-semibold">Bonjour, je suis John Doe</h1>
