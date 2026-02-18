@@ -1,0 +1,134 @@
+/* Police Nunito Sans comme demandé dans le brief */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap');
+
+* {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  font-weight: 600;
+}
+
+/* ── HEADER ── */
+.nav-link {
+  text-transform: uppercase;
+  transition: text-decoration 0.2s;
+}
+.nav-link.active {
+  font-weight: 600 !important;
+  text-decoration: underline !important;
+}
+.nav-link:hover {
+  text-decoration: underline !important;
+}
+
+/* ── HERO ── */
+.hero-section {
+  background-image: url('../assets/images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── SECTION TITRE (ligne bleue sous le titre) ── */
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.section-title h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.section-title p {
+  color: #6c757d;
+  margin-bottom: 12px;
+}
+.section-title hr {
+  width: 120px;
+  border: 2px solid #0d6efd;
+  margin: 0 auto;
+  opacity: 1;
+}
+
+/* ── A PROPOS ── */
+.about-section {
+  padding: 60px 0;
+}
+.about-card {
+  background: #fff;
+  border-radius: 4px;
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.08);
+}
+
+/* ── CARDS (Services + Portfolio) ── */
+.card {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+.card:hover {
+  background-color: #efefef !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Bouton portfolio s'éclaircit au survol */
+.card .btn {
+  transition: filter 0.2s ease;
+}
+.card .btn:hover {
+  filter: brightness(1.25);
+}
+
+/* Boutons en général s'assombrissent au survol */
+.btn {
+  transition: filter 0.2s ease;
+}
+.btn:hover {
+  filter: brightness(0.85);
+}
+
+/* ── BANNER (pages Services + Portfolio) ── */
+.page-banner {
+  background-image: url('../assets/images/banner.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+
+/* ── FOOTER ── */
+footer .social-icon {
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 0.2s ease;
+}
+footer .social-icon:hover {
+  color: #fff;
+}
+footer .footer-link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.2s ease, font-weight 0.1s ease;
+  display: block;
+  line-height: 1.8;
+}
+footer .footer-link:hover {
+  color: #fff;
+  font-weight: 600;
+}
